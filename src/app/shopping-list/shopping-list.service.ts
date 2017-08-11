@@ -29,8 +29,32 @@ export class ShoppingListService {
     }
 
     addIngredients(ingredients: Ingredient[]) {
-        this.ingredients.push(...ingredients);
+        for (let ingredient of ingredients) {
+            if (this.containsName(this.ingredients, ingredient)) {
+                let index = this.indexByName(this.ingredients, ingredient);
+                this.ingredients[index].amount += ingredient.amount;
+            } else {
+                this.ingredients.push(ingredient);
+            }
+        }
         this.ingredientsChanged.emit(this.ingredients.slice());
     }
 
+    private containsName(ingredients: Ingredient[], ingredient: Ingredient)
+    {
+        for (let i of ingredients) {
+            if (i.name === ingredient.name) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private indexByName(ingredients: Ingredient[], ingredient: Ingredient) {
+        for (let i = 0; i < ingredients.length; i++) {
+            if (ingredients[i].name === ingredient.name) {
+                return i;
+            }
+        }
+    }
 }
