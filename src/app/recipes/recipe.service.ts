@@ -50,9 +50,7 @@ export class RecipeService {
 
     addIngredientsToShoppingList(ingredients: Ingredient[])
     {
-        ingredients.forEach(element => {
-            this.shoppingListService.addIngredient(element);
-        });
+        this.shoppingListService.addIngredients(ingredients);
     }
 
 }
