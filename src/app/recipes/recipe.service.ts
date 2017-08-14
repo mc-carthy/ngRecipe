@@ -12,7 +12,7 @@ export class RecipeService {
         new Recipe(
             'Test recipe',
             'This is a test recipe',
-            'https://cdn.pixabay.com/photo/2016/06/15/19/09/food-1459693_960_720.jpg',
+            'https://c1.staticflickr.com/3/2598/3968971247_df7e2e135e_b.jpg',
             [
                 {
                     name: 'Bread',
@@ -27,7 +27,7 @@ export class RecipeService {
         new Recipe(
             'Test recipe 2',
             'This is test recipe 2',
-            'https://cdn.pixabay.com/photo/2017/06/21/22/42/recipe-2428926_960_720.jpg',
+            'https://c1.staticflickr.com/8/7242/7159318915_4969e9d3b9_b.jpg',
             [
                 {
                     name: 'Chicken',
