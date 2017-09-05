@@ -24,7 +24,7 @@ export class HeaderComponent implements OnInit {
     }
 
     onFetchData() {
-
+        this.repositoryService.getRecipes();
     }
 
 }
